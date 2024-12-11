@@ -1,0 +1,154 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dashboard</title>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.0/firebase-firestore.js"></script>
+    <script src="assets/js/firebase.js" type="module"></script>
+    <style>
+        /* dashboard.css */
+
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* User Info Section */
+#user-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#user-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#logout-btn {
+    background-color: #FF6F61;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #e45a4a;
+}
+
+/* Orders and Addresses Sections */
+#orders-section, #addresses-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#orders-list, #addresses-list {
+    margin-top: 15px;
+}
+
+#orders-list div, #addresses-list div {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#orders-list div p, #addresses-list div p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Account Settings Section */
+#account-settings {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#edit-settings-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#edit-settings-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    #user-info, #orders-section, #addresses-section, #account-settings {
+        padding: 15px;
+    }
+
+    #logout-btn, #edit-settings-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <div id="user-info">
+        <h3>Your Account Details</h3>
+        <p>Email: <span id="user-email"></span></p>
+        <p>UID: <span id="user-uid"></span></p>
+        <button id="logout-btn">Log Out</button>
+    </div>
+
+    <div id="orders-section">
+        <h3>Your Orders</h3>
+        <div id="orders-list"></div>
+    </div>
+
+    <div id="addresses-section">
+        <h3>Your Saved Shipping Addresses</h3>
+        <div id="addresses-list"></div>
+    </div>
+
+    <div id="account-settings">
+        <h3>Account Settings</h3>
+        <button id="edit-settings-btn">Edit Account Settings</button>
+    </div>
+
+    <script src="assets/js/dashboard.js" type="module"></script>
+
+</body>
+</html>
