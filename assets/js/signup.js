@@ -1,37 +1,42 @@
-import { auth, createUserWithEmailAndPassword } from './firebase.js';
+import { auth } from "./firebase.js"; // Import Firebase auth
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
 
-// Get sign-up form elements
-const signUpForm = document.getElementById('sign-up-one__form');
-const formName = document.getElementById('formName');
-const formEmail = document.getElementById('formEmail');
-const formPhone = document.getElementById('formPhone');
-const formPassword = document.getElementById('formPassword');
+// Handle form submission
+document.getElementById('sign-up-one__form').addEventListener('submit', async (e) => {
+  e.preventDefault(); // Prevent default form submission (page reload)
 
-signUpForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const name = formName.value;
-  const email = formEmail.value;
-  const phone = formPhone.value;
-  const password = formPassword.value;
+  // Get form values
+  const name = document.getElementById('formName').value;
+  const email = document.getElementById('formEmail').value;
+  const phone = document.getElementById('formPhone').value;
+  const password = document.getElementById('formPassword').value;
 
   try {
-    // Create user with email and password
+    // Step 1: Create a new user with Firebase Authentication
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
-    
-    // Optionally, you can save additional data like name and phone number in Firestore
-    const userRef = doc(firestore, "users", user.uid);
-    await setDoc(userRef, {
-      name: name,
-      email: email,
-      phone: phone
-    });
 
-    console.log("User signed up:", user);
-    window.location.href = 'dashboard.html'; // Redirect to dashboard after sign-up
+    // Step 2: Store additional user details in Firestore or Realtime Database
+    // This step is optional, you can add the user's name and phone here.
+
+    console.log('User successfully registered:', user);
+
+    // Step 3: Show success message and redirect to login page
+    alert('Account created successfully! Redirecting to login page...');
+
+    // Redirect to the login page after a short delay
+    setTimeout(() => {
+      window.location.href = 'login.html';  // Redirect to login page
+    }, 1000);
+
   } catch (error) {
-    console.error("Error signing up:", error.message);
-    alert("Sign-up failed. Please check the form details.");
+    console.error('Error during signup:', error);
+
+    // Handle errors (e.g., email already in use)
+    if (error.code === 'auth/email-already-in-use') {
+      alert('This email is already in use. Please try logging in.');
+    } else {
+      alert(`Signup failed: ${error.message}`);
+    }
   }
 });

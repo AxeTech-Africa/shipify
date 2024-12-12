@@ -1,23 +1,20 @@
-import { auth, signInWithEmailAndPassword } from './firebase.js';
+import { auth } from "./firebase.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
 
-// Get login form elements
-const loginForm = document.getElementById('login-one__form');
-const formEmail = document.getElementById('formEmail');
-const formPassword = document.getElementById('formPassword');
+document.getElementById('login-one__form').addEventListener('submit', async (e) => {
+  e.preventDefault(); // Prevent the form from reloading the page
 
-loginForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const email = formEmail.value;
-  const password = formPassword.value;
+  const email = document.getElementById('formEmail').value;
+  const password = document.getElementById('formPassword').value;
 
   try {
+    // Login user with Firebase Auth
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
-    console.log("User logged in:", user);
-    window.location.href = 'dashboard.html'; // Redirect to dashboard on successful login
+
+    alert('Login successful! Redirecting to dashboard...');
+    window.location.href = 'index.html'; // Redirect to homepage or dashboard
   } catch (error) {
-    console.error("Error logging in:", error.message);
-    alert("Login failed. Please check your email and password.");
+    alert(`Login failed: ${error.message}`);
   }
 });
