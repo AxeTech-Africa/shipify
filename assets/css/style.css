@@ -3111,3 +3111,8 @@ Main Header Three
 .custom-search-button:focus {
   outline: none;
 }
+
+#user-name {
+  margin-left: 10px; /* Adds space between the icon and the name */
+  font-size: 16px;
+}

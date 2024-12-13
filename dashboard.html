@@ -1,197 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shipify Dashboard</title>
-  
-  <!-- Inline CSS for the dashboard -->
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f7fa;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Logistiq HTML 5 Template " />
 
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
 
-    header h1 {
-      font-size: 24px;
-    }
 
-    header button {
-      background-color: red;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
-    }
+    <link rel="stylesheet" href="assets/css/01-bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/02-animate.min.css" />
+    <link rel="stylesheet" href="assets/css/03-custom-animate.css" />
+    <link rel="stylesheet" href="assets/css/05-flaticon.css" />
+    <link rel="stylesheet" href="assets/css/06-font-awesome-all.css" />
+    <link rel="stylesheet" href="assets/css/07-jarallax.css" />
+    <link rel="stylesheet" href="assets/css/08-jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/09-nice-select.css" />
+    <link rel="stylesheet" href="assets/css/11-owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/12-owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/13-jquery-ui.css" />
 
-    header button:hover {
-      background-color: darkred;
-    }
 
-    main {
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    <link rel="stylesheet" href="assets/css/module-css/01-slider.css" />
+    <link rel="stylesheet" href="assets/css/module-css/02-about.css" />
+    <link rel="stylesheet" href="assets/css/module-css/03-services.css" />
+    <link rel="stylesheet" href="assets/css/module-css/04-testimonial.css" />
+    <link rel="stylesheet" href="assets/css/module-css/05-team.css" />
+    <link rel="stylesheet" href="assets/css/module-css/06-blog.css" />
+    <link rel="stylesheet" href="assets/css/module-css/07-brand.css" />
+    <link rel="stylesheet" href="assets/css/module-css/08-contact.css" />
+    <link rel="stylesheet" href="assets/css/module-css/09-counter.css" />
+    <link rel="stylesheet" href="assets/css/module-css/10-error.css" />
+    <link rel="stylesheet" href="assets/css/module-css/11-faq.css" />
+    <link rel="stylesheet" href="assets/css/module-css/12-footer.css" />
+    <link rel="stylesheet" href="assets/css/module-css/13-page-header.css" />
+    <link rel="stylesheet" href="assets/css/module-css/14-shop.css" />
+    <link rel="stylesheet" href="assets/css/module-css/15-video.css" />
+    <link rel="stylesheet" href="assets/css/module-css/awards.css" />
+    <link rel="stylesheet" href="assets/css/module-css/banner.css" />
+    <link rel="stylesheet" href="assets/css/module-css/cta.css" />
+    <link rel="stylesheet" href="assets/css/module-css/design-interior.css" />
+    <link rel="stylesheet" href="assets/css/module-css/feature.css" />
+    <link rel="stylesheet" href="assets/css/module-css/pricing.css" />
+    <link rel="stylesheet" href="assets/css/module-css/projects.css" />
+    <link rel="stylesheet" href="assets/css/module-css/quote.css" />
+    <link rel="stylesheet" href="assets/css/module-css/skill.css" />
+    <link rel="stylesheet" href="assets/css/module-css/sliding-text.css" />
+    <link rel="stylesheet" href="assets/css/module-css/why-choose.css" />
+    <link rel="stylesheet" href="assets/css/module-css/working-process.css" />
 
-    /* Section Styles */
-    section {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
 
-    section h2 {
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
 
-    p {
-      font-size: 16px;
-      margin: 8px 0;
-    }
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+      /* Make buttons look modern */
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+.btn:hover {
+  background-color: #0056b3;
+}
 
-    button:hover {
-      background-color: darkgreen;
-    }
+/* Form styling */
+.input-group {
+  margin-bottom: 15px;
+}
 
-    #orderList {
-      list-style-type: none;
-      padding: 0;
-    }
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
 
-    #orderList li {
-      background-color: #f9f9f9;
-      padding: 15px;
-      margin: 8px 0;
-      border-radius: 8px;
-      display: flex;
-      justify-content: space-between;
-    }
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-    #orderList li p {
-      margin: 0;
-    }
+#shippingAddress {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
 
-    input[type="text"] {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      width: 80%;
-      margin-right: 10px;
-    }
+#addressDetails p {
+  margin: 10px 0;
+}
 
-    input[type="text"]:focus {
-      outline: none;
-      border-color: #4CAF50;
-    }
+#addressForm {
+  margin-top: 20px;
+}
 
-    #addressDetails {
-      margin-top: 10px;
-    }
+#editAddressBtn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    #addressForm textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 100%;
-      height: 100px;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
+#editAddressBtn:hover {
+  background-color: #218838;
+}
 
-    #addressForm button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+        /* General Styles */
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f4f7fa;
+          margin: 0;
+          padding: 0;
+        }
+    
+        header {
+          background-color: #4CAF50;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+        }
+    
+        header h1 {
+          font-size: 24px;
+        }
+    
+        header button {
+          background-color: red;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+    
+        header button:hover {
+          background-color: darkred;
+        }
+    
+        main {
+          padding: 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+    
+        /* Section Styles */
+        section {
+          background-color: white;
+          padding: 20px;
+          margin-bottom: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        section h2 {
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 15px;
+          font-weight: bold;
+        }
+    
+        p {
+          font-size: 16px;
+          margin: 8px 0;
+        }
+    
+        button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+    
+        button:hover {
+          background-color: darkgreen;
+        }
+    
+        #orderList {
+          list-style-type: none;
+          padding: 0;
+        }
+    
+        #orderList li {
+          background-color: #f9f9f9;
+          padding: 15px;
+          margin: 8px 0;
+          border-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+        }
+    
+        #orderList li p {
+          margin: 0;
+        }
+    
+        input[type="text"] {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+          width: 80%;
+          margin-right: 10px;
+        }
+    
+        input[type="text"]:focus {
+          outline: none;
+          border-color: #4CAF50;
+        }
+    
+        #addressDetails {
+          margin-top: 10px;
+        }
+    
+        #addressForm textarea {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 100%;
+          height: 100px;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+    
+        #addressForm button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 25px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+    
+        #addressForm button:hover {
+          background-color: darkgreen;
+        }
+    
+        /* Responsiveness */
+        @media (max-width: 768px) {
+          header h1 {
+            font-size: 20px;
+          }
+    
+          section {
+            padding: 15px;
+          }
+    
+          button {
+            padding: 8px 15px;
+            font-size: 14px;
+          }
+    
+          input[type="text"], #addressForm textarea {
+            width: 100%;
+          }
+          
+          #orderList li {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+    
+        /* Add some spacing between the sections */
+        #userDetails, #orderTracking, #shippingAddress {
+          margin-bottom: 30px;
+        }
+    
+        #orderStatus {
+          margin-top: 15px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #333;
+        }
+    
+        /* Styling for buttons inside the sections */
+        #editAddressBtn {
+          background-color: #007BFF;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+        }
+    
+        #editAddressBtn:hover {
+          background-color: #0056b3;
+        }
+        #orderStatus {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
 
-    #addressForm button:hover {
-      background-color: darkgreen;
-    }
+#orderStatus p {
+  font-size: 1rem;
+  color: #333;
+}
 
-    /* Responsiveness */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 20px;
-      }
+#orderStatus ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
 
-      section {
-        padding: 15px;
-      }
+#orderStatus ul li {
+  margin-bottom: 5px;
+  color: #555;
+}
 
-      button {
-        padding: 8px 15px;
-        font-size: 14px;
-      }
+#error {
+  color: red;
+  font-weight: bold;
+}
 
-      input[type="text"], #addressForm textarea {
-        width: 100%;
-      }
-      
-      #orderList li {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
+#orderStatus {
+  margin-top: 10px;
+}
 
-    /* Add some spacing between the sections */
-    #userDetails, #orderTracking, #shippingAddress {
-      margin-bottom: 30px;
-    }
+#orderStatus ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
 
-    #orderStatus {
-      margin-top: 15px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-    }
+#orderStatus p {
+  margin: 5px 0;
+}
 
-    /* Styling for buttons inside the sections */
-    #editAddressBtn {
-      background-color: #007BFF;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-
-    #editAddressBtn:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        
+      </style>
 </head>
+
 <body>
+
+    <!-- Start Preloader -->
+    <div class="loader-wrap">
+        <div class="preloader">
+            <div class="preloader-close">x</div>
+            <div id="handle-preloader" class="handle-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+                    <div class="txt-loading">
+                        <span data-text-preloader="s" class="letters-loading"> s </span>
+                        <span data-text-preloader="h" class="letters-loading"> h </span>
+                        <span data-text-preloader="i" class="letters-loading"> i </span>
+                        <span data-text-preloader="p" class="letters-loading"> p </span>
+                        <span data-text-preloader="i" class="letters-loading"> i </span>
+                        <span data-text-preloader="f" class="letters-loading"> f </span>
+                        <span data-text-preloader="y" class="letters-loading"> y </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <div class="page-wrapper">
+
+         <!--Start Main Header One-->
+         <header class="main-header main-header-one">
+            <nav class="main-menu">
+                <div class="main-menu__wrapper">
+                    <div class="container">
+                        <div class="main-header-one__inner">
+                            <div class="main-header-one__top">
+                                <div class="main-header-one__top-inner">
+                                    <div class="main-header-one__top-left">
+                                        <div class="header-contact-style1">
+                                            <ul>
+                                                <li>
+                                                    <div class="icon">
+                                                        <span class="icon-phone"></span>
+                                                    </div>
+
+                                                    <div class="text-box">
+                                                        <p><span>Talk to Us</span> <a href="tel:1234567890">[+123 456
+                                                                789]</a></p>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="icon">
+                                                        <span class="icon-email"></span>
+                                                    </div>
+
+                                                    <div class="text-box">
+                                                        <p><span>Mail Us</span> <a
+                                                                href="mailto:shipifycargo@gmail.com">[shipifycargo@gmail.com]</a>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="main-header-one__top-right">
+                                        <div class="header-social-links">
+                                            <a href="#"><span class="icon-facebook-f"></span></a>
+                                            <a href="#"><span class="icon-twitter1"></span></a>
+                                            <a href="#"><span class="icon-instagram"></span></a>
+                                            <a href="#"><span class="icon-linkedin"></span></a>
+                                        </div>
+
+                                        <div class="header-search-box">
+                                            <a href="#" class="main-menu__search search-toggler">Search
+                                                <i class="icon-search"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-header-one__bottom">
+                                <div class="main-menu__wrapper-inner">
+                                    <div class="main-header-one__bottom-inner">
+                                        <div class="main-header-one__bottom-left">
+                                            <div class="logo-box">
+                                                <a href="index.html"><img src="assets/images/Shipify 2.png"
+                                                        alt="" style="width: 150px; height: 40px;"></a>
+                                            </div>
+
+                                            <div class="main-header-one__bottom-menu">
+                                                <div class="main-menu__main-menu-box">
+                                                    <a href="#" class="mobile-nav__toggler"><i
+                                                            class="fa fa-bars"></i></a>
+                                                    <ul class="main-menu__list">
+                                                        <li class="dropdown">
+                                                            <a href="index.html">Home </a>
+                                                           
+                                                        </li>
+                                                        <li>
+                                                            <a href="about.html">About Us</a>
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <a href="service.html">Services</a>
+                                                            
+                                                        </li>
+                                                        
+                                                        <li >
+                                                            <a href="products.html">Shop Popular stores</a>
+                                                        
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <a href="#">Pages</a>
+                                                            <ul>
+                                                                <li><a href="team.html">Team</a></li>
+                                                                <li><a href="testimonial.html">Testimonials</a></li>
+                                                                <li><a href="pricing.html">Pricing</a></li>
+                                                                <li><a href="faq.html">Faq</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li class="dropdown" id="account-dropdown">
+                                                            <a href="#" id="account-icon">
+                                                              <i class="fas fa-user-circle"></i>  <!-- This is the user icon -->
+                                                              <span id="user-name"></span>  <!-- This is where the user's name will appear -->
+                                                            </a>
+                                                            <ul id="account-menu">
+                                                              <!-- Menu will be dynamically updated based on login state -->
+                                                            </ul>
+                                                          </li>
+                                                          
+                                                        
+                                                        <li>
+                                                            <a href="contact.html">Contact</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="main-header-one__bottom-right">
+                                            <div class="main-header-one__bottom-right-btn">
+                                                <a href="contact.html">Track Order
+                                                    <i class="icon-right-arrow21"></i>
+                                                </a>
+                                            </div>
+
+                                            <div class="login-box">
+                                                <a href="login.html"><i class="fa fa-sign-in"></i> <span>Member <br>
+                                                        Login</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--End Main Header One-->
+
+
+        <div class="stricky-header stricky-header--style1 stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+        <!--Start Page Header-->
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url()">
+            </div>
+            <div class="page-header__pattern"><img src="https://unicktheme.com/2024/logistiq/main-html/assets/images/project/project-v1-img1.jpg" alt="" style="width: 1920px;height:490px;"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>Account</h2>
+                    <ul class="thm-breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span class="icon-right-arrow21"></span></li>
+                        <li>Account</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--End Page Header-->
+
+        <!--Start Account-->
+        
   <header>
     <h1>Welcome to Shipify Dashboard</h1>
     <button id="logoutBtn">Logout</button>
@@ -200,38 +544,366 @@
   <main>
     <!-- User Details Section -->
     <section id="userDetails">
-      <h2>Your Details</h2>
-      <div class="user-info">
-        <p><strong>Name:</strong> <span id="userName"></span></p>
-        <p><strong>Email:</strong> <span id="userEmail"></span></p>
-        <p><strong>Phone:</strong> <span id="userPhone"></span></p>
-      </div>
-    </section>
+        <h2>Your Details</h2>
+        <!-- Example Dashboard HTML -->
+        <div id="userDetails">
+          <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+          <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+          <p><strong>Phone:</strong> <span id="userPhone">Loading...</span></p>
+        </div>
+      </section>
+      
+    
 
-    <!-- Order Tracking Section -->
-    <section id="orderTracking">
-      <h2>Order Tracking</h2>
-      <input type="text" id="trackingInput" placeholder="Enter your tracking number">
-      <button id="trackOrderBtn">Track Order</button>
-      <div id="orderStatus"></div>
-    </section>
+   <!-- Order Tracking Section -->
+<section id="orderTracking">
+    <h2>Order Tracking</h2>
+    <input type="text" id="trackingInput" placeholder="Enter your tracking number">
+    <button id="trackOrderBtn">Track Order</button>
+    <div id="orderStatus"></div>
+  </section>
+  
 
-    <!-- Shipping Address Section -->
-    <section id="shippingAddress">
-      <h2>Your Shipping Address</h2>
-      <div id="addressDetails">
-        <p><strong>Country:</strong> <span id="userCountry"></span></p>
-        <p><strong>City:</strong> <span id="userCity"></span></p>
-        <p><strong>Street:</strong> <span id="userStreet"></span></p>
-      </div>
-      <button id="editAddressBtn">Edit Address</button>
-      <form id="addressForm" style="display:none;">
-        <textarea id="addressField" placeholder="Enter your new shipping address..."></textarea>
-        <button type="submit">Update Address</button>
-      </form>
-    </section>
+   <!-- Shipping Address Section -->
+<section id="shippingAddress">
+  <h2>Your Shipping Address</h2>
+  
+  <!-- Address Display -->
+  <div id="addressDetails" style="display: block;">
+    <p><strong>Country:</strong> <span id="userCountry">Not set</span></p>
+    <p><strong>City:</strong> <span id="userCity">Not set</span></p>
+    <p><strong>Street:</strong> <span id="userStreet">Not set</span></p>
+  </div>
+
+  <!-- Edit Button -->
+  <button id="editAddressBtn" class="btn btn-edit">Edit Address</button>
+  
+  <!-- Address Edit Form -->
+  <form id="addressForm" style="display: none;">
+    <div class="input-group">
+      <label for="street">Street</label>
+      <input type="text" id="street" placeholder="Enter Street" required>
+    </div>
+    <div class="input-group">
+      <label for="city">City</label>
+      <input type="text" id="city" placeholder="Enter City" required>
+    </div>
+    <div class="input-group">
+      <label for="country">Country</label>
+      <input type="text" id="country" placeholder="Enter Country" required>
+    </div>
+    
+    <!-- Save Button -->
+    <button type="submit" class="btn btn-save">Update Address</button>
+  </form>
+</section>
+
   </main>
   
-  <script type="module" src="assets/js/dashboard.js"></script>
+        <!--End Account-->
+
+        <!--Start Footer One-->
+        <footer class="footer-one">
+            <div class="footer-one__pattern"><img src="assets/images/pattern/footer-v1-pattern.png" alt="#"></div>
+            <div class="footer-one__top">
+                <div class="container">
+                    <div class="footer-one__top-inner">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="footer-widget__single footer-one__about">
+                                    <div class="footer-one__about-logo">
+                                        <a href="index.html"><img src="assets/images/Shipify.png"
+                                                alt="" style="width: 170px;height: auto;"></a>
+                                    </div>
+                                    <p class="footer-one__about-text">Specialist In Modern
+                                        Shipping & Transportation</p>
+
+                                    <div class="footer-one__about-contact-info">
+                                        <div class="icon">
+                                            <span class="icon-support"></span>
+                                        </div>
+
+                                        <div class="text-box">
+                                            <p>Make a Call</p>
+                                            <h4><a href="tel:+1234567890">+880 123 456 789</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="footer-widget__single footer-one__quick-links">
+                                    <div class="title">
+                                        <h2>Quick Links <span class="icon-plane3"></span></h2>
+                                    </div>
+
+                                    <ul class="footer-one__quick-links-list">
+                                        <li><a href="about.html"><span class="icon-right-arrow1"></span> About Us</a>
+                                        </li>
+                                        <li><a href="service.html"><span class="icon-right-arrow1"></span> Services</a>
+                                        </li>
+                                        <li><a href="contact.html"><span class="icon-right-arrow1"></span> Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div class="footer-widget__single footer-one__contact">
+                                    <div class="title">
+                                        <h2>Get In Touch <span class="icon-plane3"></span></h2>
+                                    </div>
+
+                                    <div class="footer-one__contact-box">
+                                        <ul>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-address"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p>Office No 14, 3rd Floor, Diamond Plaza I Tower, Pramukh Swami Avenue <br>Parklands, Nairobi Kenya.</p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-email"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p><a href="mailto:yourmail@email.com">shipifycargo@gmail.com</a></p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="icon-phone"></span>
+                                                </div>
+                                                <div class="text-box">
+                                                    <p><a href="tel:1234567890">+880 123 456 789 </a></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                                <div class="footer-widget__single footer-one__subscribe">
+                                    <div class="title">
+                                        <h2>Subscribe Us <span class="icon-plane3"></span></h2>
+                                    </div>
+
+                                    <p class="footer-one__subscribe-text">Sign up for alerts, our latest blogs, <br>
+                                        thoughts, and insights</p>
+
+                                    <div class="footer-one__subscribe-form">
+                                        <form class="subscribe-form" action="#">
+                                            <input type="email" name="email" placeholder="Your E-mail">
+                                            <button type="submit" class="thm-btn">Subcribe
+                                                <i class="icon-right-arrow21"></i>
+                                                <span class="hover-btn hover-bx"></span>
+                                                <span class="hover-btn hover-bx2"></span>
+                                                <span class="hover-btn hover-bx3"></span>
+                                                <span class="hover-btn hover-bx4"></span>
+                                            </button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-one__bottom">
+                <div class="container">
+
+                    <div class="footer-one__bottom-inner">
+                        <div class="footer-one__bottom-text">
+                            <p>© Copyright 2024 <a href="index.html">Shipify.</a> All Rights Reserved</p>
+                        </div>
+
+                        <div class="footer-one__social-links">
+                            <ul>
+                                <li>
+                                    <a href="#"><span class="icon-facebook-f"></span></a>
+                                </li>
+
+                                <li>
+                                    <a href="#"><span class="icon-instagram"></span></a>
+                                </li>
+
+                                <li>
+                                    <a href="#"><span class="icon-twitter1"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="icon-linkedin"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer One-->
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-1.png" width="150"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:shipifycargo@gmail.com">shipifycargo@gmail.com</a>
+                </li>
+                <li>
+                    <i class="icon-phone"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form action="#">
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="fas fa-search"></i>
+                    <span class="hover-btn hover-bx"></span>
+                    <span class="hover-btn hover-bx2"></span>
+                    <span class="hover-btn hover-bx3"></span>
+                    <span class="hover-btn hover-bx4"></span>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+        <span class="scroll-to-top__text"> Go Back Top</span>
+    </a>
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/wNumb.min.js"></script>
+    <script src="assets/js/curved-text/jquery.circleType.js"></script>
+    <script src="assets/js/curved-text/jquery.fittext.js"></script>
+    <script src="assets/js/curved-text/jquery.lettering.min.js"></script>
+    <script src="assets/js/gsap/gsap.js"></script>
+    <script src="assets/js/gsap/ScrollTrigger.js"></script>
+    <script src="assets/js/gsap/SplitText.js"></script>
+
+
+    <script src="assets/js/01-bootstrap.bundle.min.js"></script>
+    <script src="assets/js/02-countdown.min.js"></script>
+    <script src="assets/js/03-jquery.appear.min.js"></script>
+    <script src="assets/js/04-jquery.nice-select.min.js"></script>
+    <script src="assets/js/05-jquery-sidebar-content.js"></script>
+    <script src="assets/js/06-marquee.min.js"></script>
+    <script src="assets/js/07-owl.carousel.min.js"></script>
+    <script src="assets/js/08-jarallax.min.js"></script>
+    <script src="assets/js/09-odometer.min.js"></script>
+    <script src="assets/js/10-jquery-ui.js"></script>
+    <script src="assets/js/11-jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/12-wow.js"></script>
+    <script src="assets/js/13-isotope.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/dashboard.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
+    <script>
+        // Order Tracking Specific Logic
+        import { database } from './assets/js/firebase.js'; // Ensure this path is correct
+        import { ref, get } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js';
+  
+        // Function to fetch and display tracking details
+        const trackOrder = async (orderId) => {
+          const orderRef = ref(database, 'orders/' + orderId);
+  
+          try {
+            const snapshot = await get(orderRef);
+            if (snapshot.exists()) {
+              const orderData = snapshot.val();
+              displayOrderStatus(orderData);
+            } else {
+              displayError('Order not found. Please check your tracking number.');
+            }
+          } catch (error) {
+            console.error('Error fetching order data:', error);
+            displayError('An error occurred while fetching the order details. Please try again later.');
+          }
+        };
+  
+        // Function to display order status on the page
+        const displayOrderStatus = (orderData) => {
+          const orderStatusDiv = document.getElementById('orderStatus');
+          orderStatusDiv.innerHTML = `
+            <p><strong>Status:</strong> ${orderData.status}</p>
+            <p><strong>Expected Delivery Date:</strong> ${orderData.expectedDeliveryDate}</p>
+            <h3>Tracking Updates:</h3>
+            <ul>
+              ${orderData.trackingUpdates
+                .map(update => `<li>${update.date}: ${update.update}</li>`)
+                .join('')}
+            </ul>
+          `;
+        };
+  
+        // Function to display error messages
+        const displayError = (message) => {
+          const orderStatusDiv = document.getElementById('orderStatus');
+          orderStatusDiv.innerHTML = `<p style="color: red;">${message}</p>`;
+        };
+  
+        // Add event listener to the Track Order button
+        document.getElementById('trackOrderBtn').addEventListener('click', () => {
+          const trackingNumber = document.getElementById('trackingInput').value.trim();
+          if (trackingNumber) {
+            trackOrder(trackingNumber);
+          } else {
+            displayError('Please enter a tracking number.');
+          }
+        });
+      </script>
+
+
 </body>
+
 </html>

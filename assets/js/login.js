@@ -12,7 +12,7 @@ document.getElementById('login-one__form').addEventListener('submit', async (e) 
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
-    alert('Login successful! Redirecting to dashboard...');
+    alert('Login successful! Redirecting to homepage...');
     window.location.href = 'index.html'; // Redirect to homepage or dashboard
   } catch (error) {
     alert(`Login failed: ${error.message}`);

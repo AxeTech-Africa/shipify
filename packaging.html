@@ -92,8 +92,8 @@
 
     <div class="page-wrapper">
 
-          <!--Start Main Header One-->
-          <header class="main-header main-header-one">
+           <!--Start Main Header One-->
+        <header class="main-header main-header-one">
             <nav class="main-menu">
                 <div class="main-menu__wrapper">
                     <div class="container">
@@ -121,7 +121,7 @@
 
                                                     <div class="text-box">
                                                         <p><span>Mail Us</span> <a
-                                                                href="mailto:yourmail@email.com">[support@logistra.com]</a>
+                                                                href="mailto:shipifycargo@gmail.com">[shipifycargo@gmail.com]</a>
                                                         </p>
                                                     </div>
                                                 </li>
@@ -150,8 +150,8 @@
                                     <div class="main-header-one__bottom-inner">
                                         <div class="main-header-one__bottom-left">
                                             <div class="logo-box">
-                                                <a href="index.html"><img src="assets/images/resources/logo-1.png"
-                                                        alt=""></a>
+                                                <a href="index.html"><img src="assets/images/Shipify 2.png"
+                                                        alt="" style="width: 150px; height: 40px;"></a>
                                             </div>
 
                                             <div class="main-header-one__bottom-menu">
@@ -185,13 +185,17 @@
                                                             </ul>
                                                         </li>
 
-                                                        <li class="dropdown">
-                                                            <a href="">Account</a>
-                                                            <ul>
-                                                                <li><a href="sign-up.html">Sign up</a></li>
-                                                                <li><a href="login.html">Login</a></li>
+                                                        <li class="dropdown" id="account-dropdown">
+                                                            <a href="#" id="account-icon">
+                                                              <i class="fas fa-user-circle"></i>  <!-- This is the user icon -->
+                                                              <span id="user-name"></span>  <!-- This is where the user's name will appear -->
+                                                            </a>
+                                                            <ul id="account-menu">
+                                                              <!-- Menu will be dynamically updated based on login state -->
                                                             </ul>
-                                                        </li>
+                                                          </li>
+                                                          
+                                                        
                                                         <li>
                                                             <a href="contact.html">Contact</a>
                                                         </li>
@@ -208,7 +212,7 @@
                                             </div>
 
                                             <div class="login-box">
-                                                <a href="#"><i class="fa fa-sign-in"></i> <span>Member <br>
+                                                <a href="login.html"><i class="fa fa-sign-in"></i> <span>Member <br>
                                                         Login</span> </a>
                                             </div>
                                         </div>
@@ -230,9 +234,9 @@
 
         <!--Start Page Header-->
         <section class="page-header">
-            <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            <div class="page-header__bg" style="background-image: url()">
             </div>
-            <div class="page-header__pattern"><img src="assets/images/pattern/page-header-pattern.png" alt=""></div>
+            <div class="page-header__pattern"><img src="https://unicktheme.com/2024/logistiq/main-html/assets/images/project/project-v1-img1.jpg" alt="" style="width: 1920px;height:490px;"></div>
             <div class="container">
                 <div class="page-header__inner">
                     <h2>Packaging </h2>
@@ -595,7 +599,7 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@logistiq.com">needhelp@logistiq.com</a>
+                    <a href="mailto:shipifycargo@gmail.com">shipifycargo@gmail.com</a>
                 </li>
                 <li>
                     <i class="icon-phone"></i>
@@ -674,6 +678,8 @@
 
     <!-- template js -->
     <script src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
+
 </body>
 
 </html>

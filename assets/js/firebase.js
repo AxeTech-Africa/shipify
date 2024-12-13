@@ -22,13 +22,13 @@ const database = getDatabase(app);
 
 // Fetch user details from the database
 const fetchUserDetails = async (userId) => {
-  const userRef = ref(database, 'users/' + userId);
+  const userRef = ref(database, 'users/' + userId);  // Fetch data under 'users/{userId}'
   try {
     const snapshot = await get(userRef);
     if (snapshot.exists()) {
-      return snapshot.val(); // Return user data
+      return snapshot.val(); // Return user data as an object
     } else {
-      console.log("No data available");
+      console.log("No data available for user:", userId);
       return null;
     }
   } catch (error) {
@@ -37,18 +37,4 @@ const fetchUserDetails = async (userId) => {
   }
 };
 
-// Update user's shipping address in Firebase
-const updateUserAddress = async (userId, newAddress) => {
-  const userRef = ref(database, 'users/' + userId);
-  try {
-    await update(userRef, {
-      'address': newAddress,  // This updates the entire address
-    });
-    console.log("Address updated successfully!");
-  } catch (error) {
-    console.error("Error updating address: ", error);
-  }
-};
-
-// Export auth, database, fetchUserDetails, and updateUserAddress for use in other files
-export { auth, database, fetchUserDetails, updateUserAddress };
+export { auth, database, fetchUserDetails  };

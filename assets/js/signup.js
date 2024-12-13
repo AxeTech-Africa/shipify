@@ -1,5 +1,6 @@
-import { auth } from "./firebase.js"; // Import Firebase auth
+import { auth, database } from './firebase.js';  // Import Firebase auth and database
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
+import { ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 
 // Handle form submission
 document.getElementById('sign-up-one__form').addEventListener('submit', async (e) => {
@@ -16,15 +17,18 @@ document.getElementById('sign-up-one__form').addEventListener('submit', async (e
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
-    // Step 2: Store additional user details in Firestore or Realtime Database
-    // This step is optional, you can add the user's name and phone here.
+    // Step 2: Save user details in Firebase Realtime Database
+    const userRef = ref(database, 'users/' + user.uid);  // Create a reference to the user's node in the database
+    await set(userRef, {
+      name: name,
+      email: email,
+      phone: phone
+    });
 
-    console.log('User successfully registered:', user);
+    console.log('User successfully registered and data saved:', user);
 
     // Step 3: Show success message and redirect to login page
     alert('Account created successfully! Redirecting to login page...');
-
-    // Redirect to the login page after a short delay
     setTimeout(() => {
       window.location.href = 'login.html';  // Redirect to login page
     }, 1000);
